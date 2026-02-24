@@ -16,7 +16,7 @@ Financial Risk Radar는 벤처캐피탈(VC), 사모펀드(PEF), 자산운용사 
 
 본 시스템은 LangChain 프레임워크를 기반으로 검색 에이전트와 분석 엔진이 결합된 파이프라인으로 구성되어 있습니다.
 
-1.  **Target Injection:** 사용자가 모니터링 대상 기업 리스트(CSV 또는 텍스트) 입력.
+1.  **Target Injection:** 사용자가 모니터링 대상 기업 리스트 입력.
 2.  **Web Search (Agent Action):** 각 기업명과 부정적 키워드(횡령, 적자, 논란 등)를 조합하여 `DuckDuckGoSearchRun`을 통해 정밀 검색 수행.
 3.  **Reasoning & Evaluation:** 검색된 뉴스 요약본을 **gpt-5-mini** 모델에 주입하여, 시스템 프롬프트에 정의된 리스크 평가 기준에 따라 분석.
 4.  **Structured Output:** 분석 결과를 JSON 포맷으로 파싱하여 리스크 등급, 요약, 대응 방안 데이터 생성.
